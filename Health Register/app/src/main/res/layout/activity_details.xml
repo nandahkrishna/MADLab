@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3EDED"
+    tools:context=".Details">
+
+    <TextView
+        android:gravity="center"
+        android:padding="15dip"
+        android:text="Patient Details"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif" />
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="15dip"
+            android:text="Name: "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/name"
+            android:gravity="right" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="15dip"
+            android:text="Address: "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/address"
+            android:gravity="right" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="15dip"
+            android:text="DOB: "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/dob"
+            android:gravity="right" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="15dip"
+            android:text="Gender: "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:gravity="right" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="15dip"
+            android:text="Marital Status: "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/married"
+            android:gravity="right" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="15dip"
+            android:text="Phone: "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:gravity="right" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="15dip"
+            android:text="Time: "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/time"
+            android:gravity="right" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="15dip"
+            android:text="Addiction: "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/addiction"
+            android:gravity="right" />
+    </TableRow>
+
+</TableLayout>
