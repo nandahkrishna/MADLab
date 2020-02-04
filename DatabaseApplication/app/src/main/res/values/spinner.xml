@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dept">
+        <item>HR</item>
+        <item>CS</item>
+        <item>MGMT</item>
+        <item>MKT</item>
+    </string-array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RetrieveDeptActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Retrieve Department Employees"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <Spinner
+        android:id="@+id/deptspinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100px"
+        android:entries="@array/dept"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/buttonrd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:text="Retrieve" />
+
+    <TextView
+        android:id="@+id/resultrd"
+        android:layout_width="match_parent"
+        android:layout_height="389dp"
+        android:layout_marginTop="100px"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+</LinearLayout>

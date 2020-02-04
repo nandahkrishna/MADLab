@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeleteActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Delete Employee Record"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:ems="10"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:hint="Employee ID"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/buttond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:text="Delete" />
+
+</LinearLayout>
