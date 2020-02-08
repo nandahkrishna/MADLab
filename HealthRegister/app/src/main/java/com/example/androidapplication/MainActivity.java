@@ -2,7 +2,11 @@ package com.example.androidapplication;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -90,6 +94,32 @@ public class MainActivity extends AppCompatActivity {
                     details.addiction = t1 + " " + t2;
                 else
                     details.addiction = "None";
+
+                NotificationCompat.Builder builder =
+                        new NotificationCompat.Builder(getApplicationContext(), "notify_channel")
+                                .setSmallIcon(R.mipmap.ic_launcher_round)
+                                .setContentTitle("Health Register Submission")
+                                .setContentText("You've successfully registered. Tap for more.")
+                                .setAutoCancel(true)
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                Intent notificationIntent = new Intent(getApplicationContext(), Details.class);
+                notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                notificationIntent.putExtra("Details", details);
+                PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent,
+                        PendingIntent.FLAG_UPDATE_CURRENT);
+                builder.setContentIntent(pendingIntent);
+                NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                {
+                    String channelId = "notify_channel";
+                    NotificationChannel channel = new NotificationChannel(
+                            channelId,
+                            "Notification channel",
+                            NotificationManager.IMPORTANCE_HIGH);
+                    manager.createNotificationChannel(channel);
+                    builder.setChannelId(channelId);
+                }
+                manager.notify(0, builder.build());
 
                 Context context = getApplicationContext();
                 Intent intent = new Intent(context, Details.class);
