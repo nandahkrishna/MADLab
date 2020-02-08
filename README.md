@@ -5,3 +5,4 @@ Android Apps developed for the Mobile Application Development Laboratory in seme
 2. Health Register <br>
 3. Graphics Application <br>
 4. Database Application using SQLite <br>
+5. Notifications (in HealthRegister) <br>
