@@ -10,6 +10,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
 
+import java.util.Date;
+
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
@@ -64,7 +66,7 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
                 manager.createNotificationChannel(channel);
                 builder.setChannelId(channelId);
             }
-            manager.notify(0, builder.build());
+            manager.notify((int) ((new Date().getTime()/1000) % Integer.MAX_VALUE), builder.build());
         }
     }
 }
