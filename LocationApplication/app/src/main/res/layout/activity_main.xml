@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70px"
+            android:layout_marginTop="70px"
+            android:layout_marginEnd="70px"
+            android:layout_marginBottom="70px">
+
+            <TextView
+                android:id="@+id/latText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="10px"
+                android:layout_marginRight="25px"
+                android:text="Latitude:" />
+
+            <TextView
+                android:id="@+id/locationLat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_toRightOf="@id/latText"
+                android:text="00.00"
+                android:textSize="44px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/longText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:layout_marginRight="25px"
+                android:layout_toRightOf="@id/locationLat"
+                android:text="Longitude:" />
+
+            <TextView
+                android:id="@+id/locationLong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/longText"
+                android:text="00.00"
+                android:textSize="44px"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/getLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/locationLat"
+                android:layout_marginStart="25px"
+                android:layout_marginTop="25px"
+                android:layout_marginEnd="25px"
+                android:layout_marginBottom="25px"
+                android:text="Get Location" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="70px">
+
+            <EditText
+                android:id="@+id/addressText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25px"
+                android:layout_marginTop="25px"
+                android:layout_marginEnd="25px"
+                android:layout_marginBottom="25px"
+                android:hint="Enter location" />
+
+            <Button
+                android:id="@+id/getAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressText"
+                android:layout_marginStart="25px"
+                android:layout_marginTop="25px"
+                android:layout_marginEnd="25px"
+                android:layout_marginBottom="25px"
+                android:text="Get Coordinates" />
+
+            <TextView
+                android:id="@+id/latText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/getAddress"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="10px"
+                android:layout_marginRight="25px"
+                android:text="Latitude:" />
+
+            <TextView
+                android:id="@+id/locationLat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/getAddress"
+                android:layout_marginRight="20px"
+                android:layout_toRightOf="@id/latText1"
+                android:text="00.00"
+                android:textSize="44px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/longText1"
+                android:layout_below="@id/getAddress"
+                android:layout_marginTop="10px"
+                android:layout_marginRight="25px"
+                android:layout_toRightOf="@id/locationLat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Longitude:"
+                />
+
+            <TextView
+                android:id="@+id/locationLong1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/getAddress"
+                android:layout_toRightOf="@id/longText1"
+                android:text="00.00"
+                android:textSize="44px"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
